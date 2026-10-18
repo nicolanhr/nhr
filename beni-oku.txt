@@ -1,0 +1,67 @@
+Evet, dosyanızı güncellediğinizde neredeyse tamamen aynı adımları izleyeceksiniz. Tek fark, git init ve git remote gibi kurulum komutlarını bir daha yazmanıza gerek yoktur çünkü deponuz zaten bilgisayarınızda ayarlanmıştır.
+
+Yeni bir güncelleme yapacağınız zaman sırasıyla şu kısa adımları izlemeniz yeterlidir:
+
+Güncellediğiniz yeni dosyayı (aynı isimle, yani pro.ver.zip olarak) masaüstündeki pro.ver klasörünün içine atın (eski dosyanın üzerine yazsın).
+
+Terminali o klasörde açın ve sırasıyla şu üç komutu yazın:
+
+Bash
+git add "pro.ver.zip"
+(Dosyanın güncel halini seçer)
+
+Bash
+git commit -m "Dosya guncellendi"
+(Güncellemeyi kaydeder. Tırnak içindeki yazıyı isteğinize göre değiştirebilirsiniz)
+
+Bash
+git push
+(GitHub'a gönderir)
+
+Bu git push komutunu verdiğinizde, LFS arka planda yeni dosyayı yükler ve daha önce aldığınız o sabit/kalıcı link hiç değişmeden otomatik olarak yeni dosyayı göstermeye başlar!
+
+
+
+
+
+Yeni ve güncel dosyanızı (aynı isimle, yani pro.ver.zip olarak) klasörünüze atın.
+
+Terminali açıp şu üç komutu yazın:
+
+Bash
+git add "pro.ver.zip"
+git commit -m "Dosya 450 mb olarak guncellendi"
+git push
+git push komutundan sonra LFS yeni ve büyük dosyayı yükler. Daha önce aldığınız o sabit raw linkiniz yine hiç değişmeden direkt bu 450 MB'lık yeni dosyayı göstermeye devam eder!
+
+
+
+
+
+
+
+Masaüstündeki pro.ver klasörünüz tamamen silinirse GitHub'daki dosyanız veya aldığınız link silinmez, onlar güvende kalmaya devam eder.
+
+Ancak bilgisayarınızdaki klasör silindiği için gelecekte dosyanızı güncellemek istediğinizde ufak bir hazırlık yapmanız gerekir. Durumları şöyle özetleyebiliriz:
+
+1. Linkiniz ve GitHub'daki Dosyanız Ne Olur?
+Hiçbir şey olmaz. Dosyanız GitHub sunucularında ve LFS'te güvenle durmaya devam eder.
+
+Daha önce aldığınız kalıcı indirme linki çalışmaya devam eder, insanlar dosyayı indirmeyi sürdürebilir.
+
+2. Bilgisayarınızdaki Klasör Silinirse Sonradan Ne Yapmalısınız?
+Eğer ilerleyen bir zamanda dosyada güncelleme yapmak ister ve masaüstündeki klasörün silindiğini fark ederseniz, sıfırdan her şeyi kurmanıza gerek yoktur. GitHub'daki projeyi bilgisayarınıza tekrar indirebilir (clone'layabilir) ve kaldığınız yerden devam edebilirsiniz. Bunun için şu adımları izlemeniz yeterlidir:
+
+Bilgisayarınızda boş yeni bir klasör oluşturun (örneğin yine masaüstünde pro.ver adında).
+
+Terminali bu klasörde açın ve GitHub'daki deponuzu bilgisayara geri çekmek için şu komutu yazın:
+
+Bash
+git clone https://github.com/nicolanhr/nhr.git .
+(Not: Sondaki noktaya . dikkat edin, mevcut klasörün içine indirilmesini sağlar).
+
+Bu komuttan sonra GitHub'daki dosyanız bilgisayarınıza geri gelecektir.
+
+Artık güncel dosyanızı bu klasörün içine atıp her zamanki gibi git add, git commit ve git push komutlarıyla güncellemelerinizi yapabilirsiniz.
+
+Yani masaüstündeki klasörü yanlışlıkla silseniz bile panik yapmanıza gerek yok; GitHub her şeyi sizin için yedekte tutar!
