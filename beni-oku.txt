@@ -7,7 +7,7 @@ Güncellediğiniz yeni dosyayı (aynı isimle, yani pro.ver.zip olarak) masaüst
 Terminali o klasörde açın ve sırasıyla şu üç komutu yazın:
 
 Bash
-git add "pro.ver.zip"
+git add "pro.ver.zip"   git add "pro.akt.zip"
 (Dosyanın güncel halini seçer)
 
 Bash
