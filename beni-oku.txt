@@ -10,12 +10,10 @@ Bash
 git add "pro.ver.zip"   git add "pro.akt.zip"
 (Dosyanın güncel halini seçer)
 
-Bash
 git commit -m "Dosya guncellendi"
 (Güncellemeyi kaydeder. Tırnak içindeki yazıyı isteğinize göre değiştirebilirsiniz)
 
 Bash
-git push
 (GitHub'a gönderir)
 
 Bu git push komutunu verdiğinizde, LFS arka planda yeni dosyayı yükler ve daha önce aldığınız o sabit/kalıcı link hiç değişmeden otomatik olarak yeni dosyayı göstermeye başlar!
@@ -29,7 +27,7 @@ Yeni ve güncel dosyanızı (aynı isimle, yani pro.ver.zip olarak) klasörünü
 Terminali açıp şu üç komutu yazın:
 
 Bash
-git add "pro.ver.zip"
+git add "pro.ver.zip"  git add "pro.akt.zip"
 git commit -m "Dosya 450 mb olarak guncellendi"
 git push
 git push komutundan sonra LFS yeni ve büyük dosyayı yükler. Daha önce aldığınız o sabit raw linkiniz yine hiç değişmeden direkt bu 450 MB'lık yeni dosyayı göstermeye devam eder!
